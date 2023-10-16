@@ -30,7 +30,7 @@ const makeErrorResponse = () => {
 }
 
 exports.handler = async function(event, context) {
-    const cpf = event.cpf
+    const cpf = event?.cpf
 
     if (cpf == null) {
         const randomToken = generateRandomToken()
